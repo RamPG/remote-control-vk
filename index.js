@@ -4,11 +4,11 @@ const { vkGroup } = require('./utils/connect-vk-io/index');
 vkGroup.updates.on('message_new', (ctx) => {
   exec(ctx.text, (error, stdout, stderr) => {
     if (error) {
-      console.log(`error: ${error.message}`);
+      ctx.send(error);
       return;
     }
     if (stderr) {
-      console.log(`stderr: ${stderr}`);
+      ctx.send(stderr);
       return;
     }
     ctx.send('Success');
