@@ -1,5 +1,5 @@
 const { VK } = require('vk-io');
-const config = require('../../config/index');
+const config = require('../config');
 
 module.exports = {
   vkGroup: new VK({
