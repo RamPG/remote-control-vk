@@ -1,24 +1,24 @@
 {
-  "name": "self-control",
+  "name": "remote-control",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@vk-io/hear": "^1.0.2",
-    "vk-io": "^4.0.2"
+    "vk-io": "^4.0.3"
   },
   "devDependencies": {
-    "eslint": "^7.9.0",
+    "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.22.1",
     "nodemon": "^2.0.4"
   }
 }
