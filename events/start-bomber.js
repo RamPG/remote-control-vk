@@ -6,7 +6,7 @@ const hearManager = new HearManager();
 hearManager.hear(/^Start bomber/, async (context) => {
   const info = context.text.split(' ');
   const result = bomber(info[2], info[3]);
-  await context.send(result);
+  await context.send(JSON.stringify(result));
 });
 
 module.exports = hearManager;
