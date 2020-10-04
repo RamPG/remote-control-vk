@@ -12,10 +12,11 @@ module.exports = function (phone, cycles) {
     }),
   })
     .then(async (res) => {
-      console.log(res);
-      // const info = await fetch(`http://127.0.0.1:8080/attack/${res.}/status`)
+      const result = await res.json();
+      const info = await fetch(`http://127.0.0.1:8080/attack/${result.id}/status`);
+      return info;
     })
     .catch((err) => {
-      console.log(err);
+      return err;
     });
 }
