@@ -10,5 +10,5 @@ module.exports = function (phone, cycles) {
       number_of_cycles: parseInt(cycles, 10),
       phone,
     }),
-  });
+  })
 };
