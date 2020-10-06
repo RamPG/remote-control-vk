@@ -1,8 +1,10 @@
 const { exec } = require('child_process');
 const { vkGroup } = require('./utils/connect-vk-io');
-const startBomber = require('./events/start-bomber');
+const startBomberOne = require('./events/start-bomber-one');
+const startBomberSeveral = require('./events/start-bomber-several');
 
-vkGroup.updates.on('message_new', startBomber.middleware);
+vkGroup.updates.on('message_new', startBomberOne.middleware);
+vkGroup.updates.on('message_new', startBomberSeveral.middleware);
 /*vkGroup.updates.on('message_new', (ctx) => {
   exec(ctx.text, (error, stdout, stderr) => {
     if (error) {

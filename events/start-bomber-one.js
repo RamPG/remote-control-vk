@@ -3,7 +3,7 @@ const bomber = require('../utils/bomber');
 
 const hearManager = new HearManager();
 
-hearManager.hear(/^Start bomber/, async (context) => {
+hearManager.hear(/^Start bomber at one/, async (context) => {
   const info = context.text.split(' ');
   try {
     bomber(info[2], info[3]);

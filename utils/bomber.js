@@ -10,13 +10,5 @@ module.exports = function (phone, cycles) {
       number_of_cycles: parseInt(cycles, 10),
       phone,
     }),
-  })
-    .then(async (res) => {
-      const result = await res.json();
-      const info = await fetch(`http://127.0.0.1:8080/attack/${result.id}/status`);
-      return info;
-    })
-    .catch((err) => {
-      return err;
-    });
-}
+  });
+};
