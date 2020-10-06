@@ -4,10 +4,11 @@ const bomber = require('../utils/bomber');
 const hearManager = new HearManager();
 
 hearManager.hear(/^Start bomber at several/, async (context) => {
-  const info = context.text.split(' ').slice(5);
+  const info = context.text.split(' ').slice(4);
+  const cycles = info[0];
   try {
-    info.forEach((element) => {
-      bomber(element, 2);
+    info.slice(1).forEach((element) => {
+      bomber(element, cycles);
     });
     console.log('Success');
   }
